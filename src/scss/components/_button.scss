@@ -1,0 +1,97 @@
+$shadowState: 0 5px 14px transparentize(color('primary'), 0.86);
+
+.btn {
+  padding: 1.6rem 4rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.6rem;
+  white-space: nowrap;
+  color: color('supportLight1');
+  background: linear-gradient(266.57deg, color('primaryDark'), color('primary'));
+  @include breakpoint(sm) {
+    border-radius: 15px;
+    padding: 1.4rem 3rem;
+  }
+}
+
+//  @include state(states, property, transition);
+/*
+    states = первый аргумент (SASS map)
+
+    Карта, содержащая клавиши (состояния) по умолчанию: "default", "hover" и "active". Эти ключи получают другие карты, содержащие каждое свойство и значение, соответствующее состоянию.
+
+    Свойства, указанные в "default", будут использоваться для определения переходов.
+*/
+.btn {
+  @include state(
+    (
+      default: (
+        opacity: 1,
+        box-shadow: initial,
+      ),
+      hover: (
+        opacity: 0.8,
+        box-shadow: $shadowState,
+      ),
+      active: (
+        opacity: 0.6,
+        box-shadow: $shadowState,
+      ),
+    )
+  );
+}
+/*
+    property = второй аргумент (CSS property)
+
+    Если вы собираетесь изменить состояние только одного свойства, передайте значения вместо карт в ключах по умолчанию (default, hover, active и focus).
+
+    Значения, а также переходы будут использоваться в свойстве, указанном во втором аргументе миксина.
+*/
+.btn {
+  @include state(
+    (
+      default: color('supportLight2'),
+      active: color('primaryDark'),
+    ),
+    color
+  );
+}
+/*
+    property = второй аргумент (fill или stroke)
+    стандартное значение: null
+    
+    Передача свойства "fill" или "stroke" второму аргументу приводит к тому, что стили автоматически применяются к селектору "path".
+
+    Обычно вы можете использовать его в сочетании с другим экземпляром "@include mixin", так как переходы будут применены к селектору "path" и не перезапишут предыдущие.
+
+    Используйте эту форму для изменения состояний SVG.
+*/
+.btn {
+  @include state(
+    (
+      default: color('supportLight2'),
+      hover: color('secondary'),
+      active: color('primaryDark'),
+    ),
+    fill
+  );
+}
+/*
+    property = третий аргумент (имя ключа установлено на глобальную карту $transitions) значение по умолчанию: button
+    
+    По умолчанию переходы определяются с помощью настроек клавиши "button" карты "$transition".
+
+    Создайте еще один ключ на этой карте и укажите его в третьем аргументе используемого миксина. Если вы не используете второй аргумент, установите для него "null", например:
+
+    @include state((
+        default: ...,
+        hover: ...
+        active: ...
+    ), null, global);
+*/
+
+// переход добавлен ко всем свойствам как несколько экземпляров переопределяющих переходов "@include state"
+.btn {
+  @include transition('button', all);
+}

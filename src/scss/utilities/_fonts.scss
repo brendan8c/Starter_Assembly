@@ -1,0 +1,12 @@
+@font-face {
+  font-weight: 500;
+  font-family: 'Museo-Cyrl-500';
+  src: url('/src/fonts/Museo-Cyrl-500.woff2') format('woff2'), url('/src/fonts/Museo-Cyrl-500.ttf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-weight: 400;
+  font-family: 'TiltNeon-Regular';
+  src: url('/src/fonts/TiltNeon-Regular.woff2') format('woff2'), url('/src/fonts/TiltNeon-Regular.ttf') format('opentype');
+  font-display: swap;
+}

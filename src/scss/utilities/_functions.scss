@@ -1,0 +1,31 @@
+// get maps - получить карты
+@function mediaQuery($key) {
+  @return map-get($mediaQuery, $key);
+}
+@function breakpoint($key) {
+  @return map-get(mediaQuery('sizes'), $key);
+}
+@function grid($key) {
+  @return map-get($grid, $key);
+}
+@function fontSize($key) {
+  @return map-get($fontSizes, $key);
+}
+@function color($key) {
+  $accentColorsMap: map-get($accentColors, $key);
+
+  @if $accentColorsMap {
+    @return $accentColorsMap;
+  } @else {
+    @return map-get($variationsColors, $key);
+  }
+}
+
+// general - общие
+@function isSVG($property) {
+  @if ($property == fill or $property == stroke) {
+    @return path;
+  } @else {
+    @return null;
+  }
+}
