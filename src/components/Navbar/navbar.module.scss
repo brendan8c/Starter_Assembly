@@ -1,0 +1,51 @@
+@import '/src/scss/style.module.scss';
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.textapp {
+  @apply text-6xl font-bold text-purple-500;
+  text-align: center;
+  @include f400;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+.read_the_docs {
+  color: #888;
+}
+button {
+  margin-bottom: 15px;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #b3b3b3;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  &:hover {
+    border-color: #646cff;
+  }
+}
+.isActive {
+  margin-right: 25px;
+}
+.item {
+  margin-bottom: 25px;
+  a {
+    margin-right: 25px;
+  }
+  a:last-child {
+    margin-right: 0;
+  }
+}

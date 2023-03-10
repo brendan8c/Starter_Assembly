@@ -1,7 +1,9 @@
-.app {
-  &_box {
-    display: flex;
-  }
+@import '/src/scss/style.module.scss';
+
+.logotips {
+  display: flex;
+  justify-content: center;
+  @include f400;
 }
 
 .logo {

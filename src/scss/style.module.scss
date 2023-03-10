@@ -1,7 +1,7 @@
 // sass tools - sass инструменты
 @import 'utilities/variables', 'utilities/fonts', '/node_modules/rfs/scss', 'utilities/functions', 'utilities/mixins';
 // global styles - глобальные стили
-@import 'normalize.css', 'base/typography';
+@import '/node_modules/normalize.css/normalize.css', 'base/typography';
 // добавляем Tailwind директивы
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -10,5 +10,3 @@
 @import 'layout/grid';
 // components / widgets - компоненты / виджеты
 @import 'components/button';
-// Общие стили
-@import 'styles/styles';

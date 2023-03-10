@@ -1,9 +1,9 @@
-import cl from '../scss/styles/header.module.scss';
+import cl from './header.module.scss';
 import cn from 'classnames';
 
 const Header = () => {
   return (
-    <div className={cl.app_box}>
+    <div className={cl.logotips}>
       <a href="https://vitejs.dev" target="_blank">
         <img src="./src/assets/vite.svg" className={cl.logo} alt="Vite logo" />
       </a>
