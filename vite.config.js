@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     react(),
     optimizeCssModules(),
-    viteSvgr({ exportAsDefault: true }),
+    viteSvgr({ defaultExport: 'component' }), // Получаем URL-адрес SVG-изображения.
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),

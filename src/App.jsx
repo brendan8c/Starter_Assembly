@@ -1,5 +1,5 @@
-import cl from './scss/styles/all_styles.module.scss'; // Импортируем css module стилей
-import Header from './components/Header/Header'; // Импортируем модуль с логотипами
+import cl from './scss/styles/all_styles.module.scss';
+import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Newpage from './components/Newpage/Newpage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

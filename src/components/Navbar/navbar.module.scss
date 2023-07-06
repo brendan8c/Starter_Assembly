@@ -6,9 +6,15 @@
   align-items: center;
   justify-content: center;
 }
+// @apply это добавление классов Tailwind но в scss
+// text-6xl устанавливает размер шрифта на самый большой вариант (6xl)
+// font-bold устанавливает полужирное начертание для текста
+// text-purple-500 устанавливает цвет текста на фиолетовый цвет с кодом цвета #8B5CF6
+// Если редактор кода "линтер" подчёркивает @apply в этой сборке это не является ошибкой!
 .textapp {
   @apply text-6xl font-bold text-purple-500;
   text-align: center;
+  line-height: 1.2;
   @include f400;
 }
 .card {
@@ -21,20 +27,23 @@
 .read_the_docs {
   color: #888;
 }
-button {
+.button {
   margin-bottom: 15px;
-  padding: 0.6em 1.2em;
+  // padding: 0.6em 1.2em;
+  padding: 10px;
   font-weight: 500;
   font-size: 1em;
   font-family: inherit;
-  background-color: #b3b3b3;
+  background-color: #252222;
   border: 1px solid transparent;
   border-radius: 20px;
+  box-sizing: border-box;
   outline: none;
   cursor: pointer;
   transition: border-color 0.25s;
   &:hover {
-    border-color: #646cff;
+    border: 1px solid #646cff;
+    border-radius: 22px;
   }
 }
 .isActive {
@@ -49,3 +58,4 @@ button {
     margin-right: 0;
   }
 }
+

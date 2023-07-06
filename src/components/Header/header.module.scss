@@ -1,5 +1,10 @@
 @import '/src/scss/style.module.scss';
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .logotips {
   display: flex;
   justify-content: center;
