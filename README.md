@@ -13,7 +13,7 @@
 ![Jest](https://img.shields.io/badge/-Jest-C21325?logo=jest&logoColor=white&style=for-the-badge)
 
 # Starter_Assembly
-Vite + React + Tilwind-css + SCSS
+Vite + React + Tilwind-css + SCSS + Eslint + Prettier + Jest
 
 Для запуска использовать следующие команды:
 
