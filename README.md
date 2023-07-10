@@ -12,10 +12,12 @@
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Jest](https://img.shields.io/badge/-Jest-C21325?logo=jest&logoColor=white&style=for-the-badge)
 
-# Starter_Assembly
-Vite + React + Tilwind-css + SCSS + Eslint + Prettier + Jest
+# Стартовая сборка
+### Vite + React + Tilwind-css + SCSS + Eslint + Prettier + Jest
 
-Для запуска использовать следующие команды:
+- Установите зависимости `nmp install`  
+
+- Для запуска использовать следующие команды:  
 
 `npm run dev`      – Запустит проект в режиме разработки.  
 `npm run serve`    – Запустит проект в режиме продакшн.  
