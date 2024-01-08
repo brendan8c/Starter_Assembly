@@ -1,6 +1,6 @@
 import cl from './header.module.scss';
 import cn from 'classnames';
-import { ReactComponent as Img_sass } from '../../assets/sass.svg';
+import Img_Sass from '../../assets/sass.svg';
 import img_tailwindcss from '../../assets/tailwindcss.svg';
 import images from '../../importImages'; // Нужно добавлять каждое изображение в importImages.js
 
@@ -20,7 +20,7 @@ const Header = () => {
           <img src={img_tailwindcss} className={cl.logo} alt="Tailwindcss logo" />
         </a>
         <a href="https://sass-lang.com" target="_blank">
-          <Img_sass className={cl.logo} alt="Sass logo" />
+        <img src={Img_Sass} className={cl.logo} alt="Sass logo" />
         </a>
         <a href="https://eslint.org" target="_blank">
           <img src={images['./eslint.svg']} className={cl.logo} alt="Eslint logo" />
@@ -37,5 +37,5 @@ const Header = () => {
 };
 export default Header;
 
-// Тут используется три разныx импорта изображений svg.
+// Тут используется два разныx импорта изображений svg.
 // Прямой путь: src="./src/assets/react.svg" в готовой сборке не отобразится!
